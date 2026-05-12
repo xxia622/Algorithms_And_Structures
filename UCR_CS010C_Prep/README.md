@@ -51,4 +51,4 @@ Full concept breakdowns with diagrams, code, worked examples, and common exam go
 | Quiz 3 | 11 / 28 | 39% |
 | Quiz 4 | 15 / 29.5 | 51% |
 | Quiz 5 | 18.38 / 28 | 65.6% |
-| Quiz 6 | — / — | — |
+| Quiz 6 | 20.8 / 27 | 77% |
