@@ -1,27 +1,27 @@
 # Lab 7 — Trie: Mistakes & Knowledge Gaps
 
-## Syntax Gaps
+## C++ Syntax Learned
+- **`ClassName::Method`** — scope resolution for defining methods outside a class
+- **`->` vs `.`** — pointers use `->`, regular objects use `.`
+- **Initializer lists** — `: member(value)` syntax in constructors
+- **`new ClassName()`** — heap allocation
+- **`= delete`** — explicitly disabling a method (copy constructor, assignment operator)
 
-- **`ClassName::MethodName`** — unfamiliar with scope resolution `::` for defining methods outside a class
-- **`->` vs `.`** — was using `.` on pointers; pointers need `->`
-- **Initializer lists** — `: member(value)` syntax was unfamiliar
-- **`new TrieNode()`** — dynamically allocating objects on the heap was new
+## Concepts That Were New
+- **Class vs object** — was calling methods on `TrieNode` (the class blueprint) instead of `node` (an instance). Biggest recurring confusion of the lab.
+- **Constructors** — C++ doesn't auto-initialize variables; constructor is where you set defaults yourself
+- **Pointer as a walking cursor** — `node = node->Get(c)` moves a pointer through a data structure; tried `c + 1` initially thinking you increment the character
+- **Rule of Three** — destructor, copy constructor, copy assignment; all needed when managing heap memory
+- **Memory leaks** — `new` without `delete` leaks memory; the destructor cleans it up
+- **Stack vs heap** — `TrieNode root` (stack, auto-managed) vs `new TrieNode()` (heap, manually managed)
 
-## Conceptual Gaps
-
-- **Class vs object** — called methods on `TrieNode` (the class) instead of `node` (an instance). This was the biggest recurring confusion.
-- **Constructors** — didn't know why members need to be initialized or what a constructor does
-- **Pointer as a walking cursor** — the idea of `node = node->Get(c)` moving a pointer through a data structure was unfamiliar; tried `c + 1` thinking you increment the character
-- **Return types** — returned `SearchPrefix(word)` (a pointer) directly from a `bool` function without converting
-
-## Things Clicked Quickly
-
+## Things That Clicked Quickly
 - `c - 'a'` for char-to-index once hinted
 - Range-based for loops
 - Overall trie logic once the walking pointer concept clicked
 
-## What to Review
+## Big Picture Takeaway
+Pointers are the core of C++ data structures. Almost every mistake today traced back to not fully understanding what a pointer is and how to use one. Drill this before the next lab.
 
-- Pointers and `->` — comes up constantly in CS 10C
-- Stack vs heap (`new` keyword)
-- How classes, instances, and methods relate to each other
+## Result
+Score: 30.25 / 30
